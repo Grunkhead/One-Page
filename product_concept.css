@@ -1,0 +1,213 @@
+.clippy:hover + .clippy-balloon {
+  opacity: 1;
+  -webkit-transition: 1s; /* Safari */
+  transition: 1s;
+}
+
+.clippy-balloon {
+  height: 110px;
+  width: 200px;
+  background-color: #FBF7A6;
+  color: black;
+
+  padding: 10px;
+
+  border: 1px solid black;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+
+  position: fixed;
+  bottom: 160px;
+  right: 100px;
+  opacity: 0;
+
+  font-size: 16px;
+
+  -ms-transform: rotate(340deg); /* IE 9 */
+  -webkit-transform: rotate(340deg); /* Safari 3-8 */
+  transform: rotate(340deg);
+}
+
+.clippy:hover {
+  bottom: 10px;
+  right: 0px;
+
+  -ms-transform: rotate(360deg); /* IE 9 */
+  -webkit-transform: rotate(360deg); /* Safari 3-8 */
+  transform: rotate(360deg);
+}
+
+.clippy {
+  -ms-transform: rotate(270deg); /* IE 9 */
+  -webkit-transform: rotate(270deg); /* Safari 3-8 */
+  transform: rotate(270deg);
+
+  position: fixed;
+  bottom: 0px;
+  right: -100px;
+}
+
+/* Form styles */
+form > * {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+
+  padding: 10px;
+  font-size: 16px;
+}
+
+input {
+  height: 40px;
+}
+
+textarea {
+	height: 240px;
+}
+
+input[type=button] {
+  width: 100px;
+  background-color: #EA526F;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+/* Resp. styles */
+@media screen and (max-width: 768px) {
+    nav ul a {
+      display: block;
+      padding: 5px 0px 5px 0px;
+    }
+
+    div.block {
+      padding: 20px 10% 20px 10% !important
+    }
+}
+
+@media screen and (max-width: 375px) {
+    nav h1 {
+      font-size: 1em;
+    }
+
+    nav ul a li {
+      font-size: 16px;
+    }
+
+    div.block h1 {
+      color: black;
+      font-size: 1.2em;
+    }
+
+    div.block p {
+      color: black;
+      font-size: 0.8em;
+    }
+}
+
+/* Set '1 em' to be equal as 20px; */
+body {
+  font-size: 20px;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Navigation styles */
+nav {
+  background-color: #EA526F;
+  color: white;
+  padding: 20px 40px 20px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li {
+  font-size: 20px;
+  font-weight: 600;
+  display: inline;
+  padding: 10px;
+}
+
+/* Block styles */
+section.block {
+  padding: 20px 20% 20px 20%;
+}
+
+section.block div img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 300px;
+}
+
+section.block div img:hover {
+  opacity: 0.9;
+  filter: contrast(100%);
+  -webkit-filter: contrast(100%);
+  filter: sepia(100%);
+  -webkit-filter: sepia(100%);
+}
+
+section.block-blue h1,
+section.block-orange h1 {
+  color: white;
+  font-size: 2em;
+}
+
+section.block-white {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+section.block-blue {
+  background-color: #25CED1;
+  color: white;
+}
+
+section.block-orange {
+  background-color: #FF8A5B;
+  color: white;
+}
+
+.game-board {
+  border: 1px solid red;
+  list-style: none;
+  padding: 0px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.game-board li {
+  display: inline-block;
+  border: 1px solid green;
+  width: 98px;
+  height: 98px;
+}
+
+.crossed {
+  background: yellow;
+}
+
+.circled {
+  background-color: orange;
+}
