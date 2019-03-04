@@ -1,44 +1,3 @@
-// In the form is a button waiting to be clicked.
-// When it is clicked it sets the cookie and saves the values locally.
-
-  // Seperate function for fetching the form data.
-  function getFormData() {
-
-    var formData = [];
-
-    formData['name']    = document.getElementById("name").value;
-    formData['email']   = document.getElementById("email").value;
-    formData['message'] = document.getElementById("message").value;
-
-    return formData;
-  }
-
-  function setCookie() {
-
-      // Create a new date timestamp.
-      var date = new Date();
-      date.setTime( date.getTime() + ( 365 * 24 * 60 * 60 * 1000 ));
-
-      // Fetch the form data.
-      const formData = getFormData();
-
-      const expires = 'expires=' + date.toUTCString();
-      const name    = 'name='    + formData['name'];
-      const email   = 'email='   + formData['email'];
-      const message = 'message=' + formData['message'];
-
-      // Set the form cookie
-      const myCookie = document.cookie =
-      'formCookie' + "=" +
-      name         + ";" +
-      email        + ";" +
-      message      + ";" +
-      expires      + ";";
-
-      // Log it for some caveman debugging. Check console for cookie data.
-      console.log(myCookie);
-}
-
 // GAME LOGIC under here.
 
 function generateGameLayout() {
@@ -54,7 +13,7 @@ function generateGameLayout() {
       makeTurn(event.target);
     });
 
-    node.id  = i;
+    node.id = i;
 
     board.appendChild(node);
   }
@@ -80,12 +39,18 @@ function makeTurn(node) {
 
   } else if(!isPlayerOne) {
 
-    setCircle(node);
+    makeTurnAI();
     isPlayerOne = true;
     playedTurns++;
   }
 
   checkForWinner();
+}
+
+function makeTurnAI() {
+  // Implement AI board analyze
+  // Check for best move
+  // Make move
 }
 
 // Check if max turns are played, then reset the board.
